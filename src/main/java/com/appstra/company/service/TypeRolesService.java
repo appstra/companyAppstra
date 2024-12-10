@@ -5,9 +5,9 @@ import com.appstra.company.entity.TypeRoles;
 import java.util.List;
 
 public interface TypeRolesService {
-    TypeRoles savePerson(TypeRoles typeRoles);
-    TypeRoles upDatePerson (TypeRoles typeRoles);
-    Boolean deletePerson (Integer typeRolesId);
-    List<TypeRoles> listPerson();
-    TypeRoles getPerson (Integer typeRolesId);
+    TypeRoles saveTypeRoles(TypeRoles typeRoles);
+    TypeRoles upDateTypeRoles(TypeRoles typeRoles);
+    Boolean deleteTypeRoles(Integer typeRolesId);
+    List<TypeRoles> listTypeRoles();
+    TypeRoles getTypeRoles(Integer typeRolesId);
 }
