@@ -1,8 +1,11 @@
 package com.appstra.company.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -30,4 +33,8 @@ public class Role {
     @ManyToOne
     @JoinColumn(name = "COMP_ID", referencedColumnName = "COMP_ID")
     private Company company;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @OneToMany(mappedBy = "role")
+    private List<RolePermission> roleList;
 }

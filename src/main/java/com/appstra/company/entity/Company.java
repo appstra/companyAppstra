@@ -51,4 +51,8 @@ public class Company {
     @OneToMany(mappedBy = "company")
     private List<Role> roleList;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @OneToMany(mappedBy = "company")
+    private List<TypeContract> typeContractList;
+
 }
