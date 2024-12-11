@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 @Getter
@@ -24,10 +25,10 @@ public class Permission {
     private String permissionDescription;
 
     @Column(name = "PERM_CREATION_DATE")
-    private Integer permissionCreationDate;
+    private Timestamp permissionCreationDate;
 
     @Column(name = "PERM_EDIT_DATE")
-    private Integer permissionEditionDate;
+    private Timestamp permissionEditionDate;
 
     @Column(name = "PERM_EDIT_USER_ID")
     private Integer permissionEditUserID;

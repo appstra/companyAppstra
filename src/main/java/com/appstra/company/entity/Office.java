@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Timestamp;
+import java.time.LocalDate;
+
 @Getter
 @Setter
 @Entity
@@ -22,15 +25,14 @@ public class Office {
     private String officeDescription;
 
     @Column(name = "OFFI_CREATION_DATE")
-    private Integer officeCreationDate;
+    private LocalDate officeCreationDate;
 
     @Column(name = "OFFI_EDIT_DATE")
-    private Integer officeEditionDate;
+    private LocalDate officeEditionDate;
 
     @Column(name = "OFFI_EDIT_USER_ID")
     private Integer officeEditUserID;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @ManyToOne
     @JoinColumn(name = "COMP_ID", referencedColumnName = "COMP_ID")
     private Company company;

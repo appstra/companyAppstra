@@ -4,11 +4,12 @@ import com.appstra.company.entity.Office;
 import com.appstra.company.repository.OfficeRepository;
 import com.appstra.company.service.OfficeService;
 import io.swagger.v3.oas.annotations.servers.Server;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 
-@Server
+@Service
 public class OfficeImpl implements OfficeService {
     private final OfficeRepository officeRepository;
 

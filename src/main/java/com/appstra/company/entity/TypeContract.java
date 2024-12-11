@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Timestamp;
+
 @Getter
 @Setter
 @Entity
@@ -16,16 +18,16 @@ public class TypeContract {
     private Integer typeContractId;
 
     @Column(name = "TYCO_NAME")
-    private Integer typeContractName;
+    private String typeContractName;
 
     @Column(name = "TYCO_DESCRIPTION")
-    private Integer typeContractDescription;
+    private String typeContractDescription;
 
     @Column(name = "TYCO_CREATION_DATE")
-    private Integer typeContractPermissionCreationDate;
+    private Timestamp typeContractPermissionCreationDate;
 
     @Column(name = "TYCO_EDIT_DATE")
-    private Integer typeContractPermissionEditionDate;
+    private Timestamp typeContractPermissionEditionDate;
 
     @Column(name = "TYCO_EDIT_USER_ID")
     private Integer typeContractPermissionEditUserID;

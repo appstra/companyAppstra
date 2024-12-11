@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 @Getter
@@ -17,17 +18,16 @@ public class TypeRoles {
     @Column(name = "TYRO_ID")
     private Integer typeRolesId;
     @Column(name = "TYRO_NAME")
-    private Integer typeRolesName;
+    private String typeRolesName;
     @Column(name = "TYRO_DESCRIPTION")
-    private Integer typeRolesDescription;
+    private String typeRolesDescription;
     @Column(name = "TYRO_CREATION_DATE")
-    private Integer typeRolesCreationDate;
+    private Timestamp typeRolesCreationDate;
     @Column(name = "TYRO_EDIT_DATE")
-    private Integer typeRolesEditionDate;
+    private Timestamp typeRolesEditionDate;
     @Column(name = "TYRO_EDIT_USER_ID")
     private Integer typeRolesEditUserID;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "typeRoles")
     private List<Role> roleList;
 }

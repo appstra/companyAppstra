@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 @Getter
@@ -17,19 +18,22 @@ public class Role {
     @Column(name = "ROLE_ID")
     private Integer roleId;
     @Column(name = "ROLE_NAME")
-    private Integer roleName;
+    private String roleName;
     @Column(name = "ROLE_DESCRIPTION")
-    private Integer roleDescription;
+    private String roleDescription;
     @Column(name = "ROLE_CREATION_DATE")
-    private Integer roleCreationDate;
+    private Timestamp roleCreationDate;
     @Column(name = "ROLE_EDIT_DATE")
-    private Integer roleEditionDate;
+    private Timestamp roleEditionDate;
     @Column(name = "ROLE_EDIT_USER_ID")
     private Integer roleEditUserID;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @ManyToOne
     @JoinColumn(name = "TYRO_ID", referencedColumnName = "TYRO_ID")
     private TypeRoles typeRoles;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @ManyToOne
     @JoinColumn(name = "COMP_ID", referencedColumnName = "COMP_ID")
     private Company company;

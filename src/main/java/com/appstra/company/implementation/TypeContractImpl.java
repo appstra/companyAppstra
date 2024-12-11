@@ -3,10 +3,12 @@ package com.appstra.company.implementation;
 import com.appstra.company.entity.TypeContract;
 import com.appstra.company.repository.TypeContractRepository;
 import com.appstra.company.service.TypeContractService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 
+@Service
 public class TypeContractImpl implements TypeContractService {
     private final TypeContractRepository typeContractRepository;
 

@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Timestamp;
+
 @Getter
 @Setter
 @Entity
@@ -24,10 +26,10 @@ public class RolePermission {
     private Permission permission;
 
     @Column(name = "ROPE_CREATION_DATE")
-    private Integer rolePermissionCreationDate;
+    private Timestamp rolePermissionCreationDate;
 
     @Column(name = "ROPE_EDIT_DATE")
-    private Integer rolePermissionEditionDate;
+    private Timestamp rolePermissionEditionDate;
 
     @Column(name = "ROPE_EDIT_USER_ID")
     private Integer rolePermissionEditUserID;

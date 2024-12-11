@@ -44,6 +44,7 @@ public class Company {
     @Column(name = "COMP_EDIT_USER_ID")
     private Integer companyEditUserID;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "company")
     private List<Office> officeList;
 

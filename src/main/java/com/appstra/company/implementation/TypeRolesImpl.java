@@ -3,10 +3,12 @@ package com.appstra.company.implementation;
 import com.appstra.company.entity.TypeRoles;
 import com.appstra.company.repository.TypeRolesRepository;
 import com.appstra.company.service.TypeRolesService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 
+@Service
 public class TypeRolesImpl implements TypeRolesService {
     private final TypeRolesRepository typeRolesRepository;
 

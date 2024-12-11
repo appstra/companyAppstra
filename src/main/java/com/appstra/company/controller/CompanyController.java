@@ -38,8 +38,9 @@ public class CompanyController {
     public ResponseEntity<List<Company>> listCompany (){
         return ResponseEntity.ok(companyService.listCompany());
     }
-    @GetMapping("/{personId}")
-    @Operation(summary = "Informa persona", description = "Informa persona")
+
+    @GetMapping("/{companyId}")
+    @Operation(summary = "Informacion de la empresa", description = "Informacion de la empresa")
     public ResponseEntity<Company> getPerson (@PathVariable("companyId") Integer companyId){
         return ResponseEntity.ok(companyService.getCompany(companyId));
     }
