@@ -47,4 +47,9 @@ public class TypeRolesImpl implements TypeRolesService {
     public TypeRoles getTypeRoles(Integer typeRolesId) {
         return typeRolesRepository.findById(typeRolesId).orElseThrow(() -> new NoSuchElementException("el Tipo contrato con el Id : " + typeRolesId + "no se encontro"));
     }
+
+    @Override
+    public List<TypeRoles> listtyperolescompanyId(Integer companyId) {
+        return typeRolesRepository.findByCompanyCompanyId(companyId);
+    }
 }

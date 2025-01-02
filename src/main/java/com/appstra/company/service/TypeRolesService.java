@@ -10,4 +10,5 @@ public interface TypeRolesService {
     Boolean deleteTypeRoles(Integer typeRolesId);
     List<TypeRoles> listTypeRoles();
     TypeRoles getTypeRoles(Integer typeRolesId);
+    List<TypeRoles> listtyperolescompanyId(Integer companyId);
 }

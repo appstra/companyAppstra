@@ -47,4 +47,9 @@ public class RoleImpl implements RoleService {
     public Role getRole(Integer roleId) {
         return roleRepository.findById(roleId).orElseThrow(() -> new NoSuchElementException("el permiso con el Id : " + roleId + "no se encontro"));
     }
+
+    @Override
+    public List<Role> getRoleTypeRolesId(Integer typeRolesId) {
+        return roleRepository.findByTypeRolesTypeRolesId(typeRolesId);
+    }
 }

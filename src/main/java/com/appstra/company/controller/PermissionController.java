@@ -52,4 +52,10 @@ public class PermissionController {
         Permission permission = permissionService.getPermission(permissionId);
         return ResponseEntity.ok(permission);
     }
+
+    @GetMapping("/listpermissionroleid/{roleId}")
+    @Operation(summary = "Obtener Permiso de Rol", description = "Obtener la información de un permiso de rol por su ID")
+    public ResponseEntity<List<Permission>> getListrolepermissionroleid(@PathVariable Integer roleId) {
+        return ResponseEntity.ok(permissionService.getListrolepermissionroleid(roleId));
+    }
 }

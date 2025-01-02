@@ -52,4 +52,11 @@ public class TypeRolesController {
         TypeRoles typeRoles = typeRolesService.getTypeRoles(typeRolesId);
         return ResponseEntity.ok(typeRoles);
     }
+
+    @GetMapping("/listtyperolescompanyId/{companyId}")
+    @Operation(summary = "Listar Tipos de Roles por compañia ID", description = "Obtener una lista de todos los tipos de roles por compañia ID")
+    public ResponseEntity<List<TypeRoles>> listtyperolescompanyId(@PathVariable Integer companyId) {
+        List<TypeRoles> typeRolesList = typeRolesService.listtyperolescompanyId(companyId);
+        return ResponseEntity.ok(typeRolesList);
+    }
 }

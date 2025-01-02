@@ -52,4 +52,10 @@ public class RoleController {
         Role role = roleService.getRole(roleId);
         return ResponseEntity.ok(role);
     }
+
+    @GetMapping("/listroletyperole/{typeRolesId}")
+    @Operation(summary = "Obtener Rol por tipos de rol", description = "Obtener la información de un rol por tipos de rol")
+    public ResponseEntity<List<Role>> getRoleTypeRolesId(@PathVariable Integer typeRolesId) {
+        return ResponseEntity.ok(roleService.getRoleTypeRolesId(typeRolesId));
+    }
 }

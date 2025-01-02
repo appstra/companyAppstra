@@ -10,4 +10,5 @@ public interface PermissionService {
     Boolean deletePermission(Integer permissionId);
     List<Permission> listPermission();
     Permission getPermission(Integer permissionId);
+    List<Permission> getListrolepermissionroleid(Integer roleId);
 }

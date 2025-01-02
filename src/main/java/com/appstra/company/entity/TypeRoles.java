@@ -30,4 +30,8 @@ public class TypeRoles {
 
     @OneToMany(mappedBy = "typeRoles")
     private List<Role> roleList;
+
+    @ManyToOne
+    @JoinColumn(name = "COMP_ID", referencedColumnName = "COMP_ID")
+    private Company company;
 }

@@ -47,4 +47,9 @@ public class PermissionImpl implements PermissionService {
     public Permission getPermission(Integer permissionId) {
         return permissionRepository.findById(permissionId).orElseThrow(() -> new NoSuchElementException("el permiso con el Id : " + permissionId + "no se encontro"));
     }
+
+    @Override
+    public List<Permission> getListrolepermissionroleid(Integer roleId) {
+        return permissionRepository.findByRoleListRoleRoleId(roleId);
+    }
 }
