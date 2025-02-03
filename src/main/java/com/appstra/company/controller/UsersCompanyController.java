@@ -53,6 +53,12 @@ public class UsersCompanyController {
         return ResponseEntity.ok(usersCompany);
     }
 
+    /**
+     * EndPoint que se consume desde UserAppstra
+     * @param userId
+     * @return List<UsersCompany>
+     */
+
     @GetMapping("/listUsersCompanyUserId/{userId}")
     @Operation(summary = "Listar Compañías de Usuario por usuario ID", description = "Obtener una lista de todas las compañías de usuario por usuario ID")
     public ResponseEntity<List<UsersCompany>> listUsersCompanyUserId(@PathVariable Integer userId) {
